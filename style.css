@@ -1,0 +1,473 @@
+@font-face {
+    font-family: Poppins;
+    src: url(/Poppin/);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    
+    color: #ededed;
+    background: #3f0606;
+}
+
+.header {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 10%;
+     background: transparent ;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+     
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #f11515;  
+}
+
+.home {
+    height: 100vh;
+    background: url('Images/Untitled-3.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    margin-bottom: 60px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f11515;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #f11515;
+    border: 2px solid #f11515;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #701414;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #f11515;
+}
+
+/* Without this it will just the #f11515 color(Let's Chat)  */
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #f11515;
+}
+
+/* Without this the "Let's Chat" color won't change */
+.btn-box a:nth-child(2):hover {
+    color: #701414;
+}
+
+/*Without this there will be no filling of the "Let's Chat" button*/
+.btn-box a:nth-child(2)::before {
+    background: #f11515;
+}
+
+/* Controls the animation of the buttons  */
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #3f0606;
+    z-index: -1;
+    transition: .5s;
+}
+
+/* Controls the filling of the "Hire me" button */
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #f11515;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #f11515;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s; 
+}
+
+.home-sci a:hover {
+    color: #830f0f;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f11515;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 535px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: maniActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+    
+}
+
+.home-imgHover:hover {
+    background: #3f0607;
+    opacity: .8;
+
+}
+
+/* Transition in of the image */
+.home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #3f0606;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes maniActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+
+/* The Next Page */
+
+.skills {
+    top: 50%;
+    padding: 0; margin: 0;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    color: #aa1616;
+}
+
+.skills-content{
+    background: linear-gradient(45deg, #3f0607, #3f0606);
+    padding: 15px 9%;
+    padding-bottom: 100px;
+
+}
+.skills img {
+    width: 75%;
+    height: auto;
+    border-radius: 5%;
+}
+
+.skills-content .heading {
+    text-align: center;
+    padding-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+    font-size: 50px;
+}
+
+.skills-content .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+}
+
+.skills-content .box-container .box{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+    border-radius: 5px;
+    background: #3f0608;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.skills-content .box-container .box h3{
+    color:#aa1616;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.skills-content .box-container .box p{
+    color:#aa1616;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.skills-content .box-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #f11515;
+    color: #701414;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    text-decoration: none;
+
+}
+
+.skills-content .box-container .box .btn:hover{
+    letter-spacing: 1px;
+}
+.skills-content .box-container .box:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 3);
+    transform: scale(1.03);
+}
+
+@media (max-width:768px) {
+    .header {
+        padding: 20px;
+    }
+    .skills-content{
+        padding: 20px;
+    }
+}
+
+footer{
+    text-align: center;
+    color: #ededed;
+    background-color: #f11515; padding: 5px; border-radius: 15px; margin:  1rem 0;
+}
+
+/* Contact Us Page */
+
+.contact-us {
+    text-align: center;
+    color: #aa1616;
+}
+
+.contact-us h1 {
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+    font-size: 50px;
+}
+
+.contact-box {
+    width: 500px;
+    background-color: #3f0608;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 3);
+    top: 50%;
+    left: 30%;
+    
+    position: relative;
+}
+
+form {
+    margin: 35px;
+}
+
+.input-field {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border: 1px solid #777 ;
+    border-radius: 14px;
+    outline: none;
+}
+
+.textarea-field {
+    height: 150px;
+    padding-top: 10px;
+}
+
+.contact-box .btn {
+    border-radius: 20px;
+    color: #701414;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 10px;
+    background-color: #f11515;
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
